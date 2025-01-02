@@ -34,6 +34,9 @@ reg.exe add "HKLM\%HIVE%\Services\gpsvc" /v "Start" /t REG_DWORD /d "4" /f
 reg.exe add "HKLM\%HIVE%\Services\EventLog" /v "Start" /t REG_DWORD /d "4" /f
 reg.exe add "HKLM\%HIVE%\Services\PlugPlay" /v "Start" /t REG_DWORD /d "4" /f
 reg.exe add "HKLM\%HIVE%\Services\SgrmBroker" /v "Start" /t REG_DWORD /d "4" /f
+sc config SystemEventsBroker start=auto >nul 2>&1 
+sc config TimeBroker start=demand >nul 2>&1 
+sc config TimeBrokerSvc start=demand >nul 2>&1 
 echo Closing in 3 seconds...
 timeout 3 > nul
 exit
