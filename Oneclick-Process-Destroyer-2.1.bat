@@ -38,6 +38,7 @@ sc config SystemEventsBroker start=auto >nul 2>&1
 sc config Schedule start=auto >nul 2>&1
 sc config TimeBroker start=auto >nul 2>&1
 sc config TimeBrokerSvc start=auto >nul 2>&1
+sc config WSearch start=auto >nul 2>&1
 echo Closing in 3 seconds...
 timeout 3 > nul
 exit
